@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: hr-agent-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=false
+      - RESUME_CSV=resume_dataset_1200.csv
+      - LEAVE_EXCEL=employee leave tracking data.xlsx
+    volumes:
+      - ./resume_dataset_1200.csv:/app/resume_dataset_1200.csv:ro
+      - ./employee\ leave\ tracking\ data.xlsx:/app/employee\ leave\ tracking\ data.xlsx:ro
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - hr-agent-network
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hr-agent-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - hr-agent-network
+
+networks:
+  hr-agent-network:
+    driver: bridge

@@ -1,0 +1,10 @@
+{
+  "candidate_id": "candidate_0",
+  "interviewer_id": "interviewer_001",
+  "status": "success",
+  "error_code": null,
+  "error_message": "Interview scheduled successfully",
+  "conflict_details": null,
+  "scheduled_date": "2025-03-10",
+  "scheduled_time": "10:00"
+}

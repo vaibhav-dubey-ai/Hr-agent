@@ -1,0 +1,137 @@
+[
+  {
+    "rank": 1,
+    "candidate_id": "candidate_483",
+    "name": "Christopher Garcia",
+    "score": 0.6877576121449414,
+    "normalized_score": 1.0,
+    "score_breakdown": {
+      "skills_match_score": 0.4743155945827182,
+      "experience_score": 0.45,
+      "education_score": 0.16666666666666666,
+      "certification_score": 1.0,
+      "final_score": 0.6877576121449414,
+      "normalized_score": 1.0
+    },
+    "reasoning": {
+      "skills_match_score": "0.4743",
+      "experience_score": "0.4500",
+      "education_score": "0.1667",
+      "certification_score": "1.0000",
+      "embedding_match": "0.47",
+      "experience": "9 years",
+      "degree": "High School",
+      "skills": "DevOps, Linux, Agile, Kubernetes, Blockchain, Natural Language Processing",
+      "certifications": "Yes"
+    },
+    "target_job": "Targeting a Machine Learning Engineer position to utilize my educational background and experience t"
+  },
+  {
+    "rank": 2,
+    "candidate_id": "candidate_25",
+    "name": "Jessica Chen",
+    "score": 0.6430385215574556,
+    "normalized_score": 0.9349784142002903,
+    "score_breakdown": {
+      "skills_match_score": 0.5591639317890919,
+      "experience_score": 0.15,
+      "education_score": 0.6666666666666666,
+      "certification_score": 1.0,
+      "final_score": 0.6430385215574556,
+      "normalized_score": 0.9349784142002903
+    },
+    "reasoning": {
+      "skills_match_score": "0.5592",
+      "experience_score": "0.1500",
+      "education_score": "0.6667",
+      "certification_score": "1.0000",
+      "embedding_match": "0.56",
+      "experience": "3 years",
+      "degree": "Bachelor's",
+      "skills": "Terraform, Java, REST APIs, Kafka, SQL, Blockchain, Azure, Cybersecurity",
+      "certifications": "Yes"
+    },
+    "target_job": "Looking for an opportunity as a Machine Learning Engineer to leverage my expertise in machine learni"
+  },
+  {
+    "rank": 3,
+    "candidate_id": "candidate_411",
+    "name": "Aisha Williams",
+    "score": 0.6397366336072255,
+    "normalized_score": 0.9301774670469287,
+    "score_breakdown": {
+      "skills_match_score": 0.5815787578247504,
+      "experience_score": 0.1,
+      "education_score": 0.3333333333333333,
+      "certification_score": 1.0,
+      "final_score": 0.6397366336072255,
+      "normalized_score": 0.9301774670469287
+    },
+    "reasoning": {
+      "skills_match_score": "0.5816",
+      "experience_score": "0.1000",
+      "education_score": "0.3333",
+      "certification_score": "1.0000",
+      "embedding_match": "0.58",
+      "experience": "2 years",
+      "degree": "Certificate",
+      "skills": "TensorFlow, Kafka, Ansible, Machine Learning",
+      "certifications": "Yes"
+    },
+    "target_job": "Seeking a challenging role as a Machine Learning Engineer where I can apply my skills and knowledge "
+  },
+  {
+    "rank": 4,
+    "candidate_id": "candidate_79",
+    "name": "Ethan Thomas",
+    "score": 0.6332759857739364,
+    "normalized_score": 0.9207836810397625,
+    "score_breakdown": {
+      "skills_match_score": 0.527729988144947,
+      "experience_score": 0.2,
+      "education_score": 0.8333333333333334,
+      "certification_score": 1.0,
+      "final_score": 0.6332759857739364,
+      "normalized_score": 0.9207836810397625
+    },
+    "reasoning": {
+      "skills_match_score": "0.5277",
+      "experience_score": "0.2000",
+      "education_score": "0.8333",
+      "certification_score": "1.0000",
+      "embedding_match": "0.53",
+      "experience": "4 years",
+      "degree": "Master's",
+      "skills": "CI/CD, REST APIs, Linux, Data Analysis, Natural Language Processing, AWS, Java, TensorFlow",
+      "certifications": "Yes"
+    },
+    "target_job": "Seeking a challenging role as a Machine Learning Engineer where I can apply my skills and knowledge "
+  },
+  {
+    "rank": 5,
+    "candidate_id": "candidate_316",
+    "name": "Arjun Verma",
+    "score": 0.6301228375334308,
+    "normalized_score": 0.9161990015177551,
+    "score_breakdown": {
+      "skills_match_score": 0.5479329022029833,
+      "experience_score": 0.15,
+      "education_score": 0.6666666666666666,
+      "certification_score": 1.0,
+      "final_score": 0.6301228375334308,
+      "normalized_score": 0.9161990015177551
+    },
+    "reasoning": {
+      "skills_match_score": "0.5479",
+      "experience_score": "0.1500",
+      "education_score": "0.6667",
+      "certification_score": "1.0000",
+      "embedding_match": "0.55",
+      "experience": "3 years",
+      "degree": "Bachelor's",
+      "skills": "Spark, DevOps, Agile, TensorFlow, Git, Java, AWS",
+      "certifications": "Yes"
+    },
+    "target_job": "Looking for an opportunity as a Machine Learning Engineer to leverage my expertise in cybersecurity "
+  }
+]

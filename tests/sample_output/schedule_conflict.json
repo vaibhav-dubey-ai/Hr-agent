@@ -1,0 +1,14 @@
+{
+  "candidate_id": "candidate_1",
+  "interviewer_id": "interviewer_001",
+  "status": "failed",
+  "error_code": "SLOT_NOT_AVAILABLE",
+  "error_message": "Interviewer not available at requested time",
+  "conflict_details": {
+    "requested_date": "2025-03-10",
+    "requested_time": "10:00",
+    "duration_minutes": 60
+  },
+  "scheduled_date": null,
+  "scheduled_time": null
+}

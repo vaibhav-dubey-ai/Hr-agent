@@ -1,0 +1,23 @@
+{
+  "employee_name": "Michael Moore",
+  "leave_type": "Casual",
+  "start_date": "2025-04-01",
+  "end_date": "2025-04-30",
+  "days_requested": 100,
+  "decision_type": "rejected",
+  "applied_policy_rules": [
+    "RULE_DATE_VALIDATION_PASSED",
+    "RULE_INSUFFICIENT_BALANCE"
+  ],
+  "evidence": {
+    "date_validation": {
+      "passed": true
+    },
+    "balance_check": {
+      "required": 100,
+      "available": 10,
+      "passed": false,
+      "reason": "Balance check failed"
+    }
+  }
+}

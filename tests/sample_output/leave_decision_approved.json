@@ -1,0 +1,44 @@
+{
+  "employee_name": "Michael Moore",
+  "leave_type": "Casual",
+  "start_date": "2025-03-10",
+  "end_date": "2025-03-12",
+  "days_requested": 2,
+  "decision_type": "approved",
+  "applied_policy_rules": [
+    "RULE_DATE_VALIDATION_PASSED",
+    "RULE_BALANCE_CHECK_PASSED",
+    "RULE_ROLE_ELIGIBILITY_PASSED",
+    "RULE_OVERLAP_CHECK_PASSED",
+    "POLICY_APPROVED_ALL_CHECKS_PASSED"
+  ],
+  "evidence": {
+    "date_validation": {
+      "passed": true
+    },
+    "balance_check": {
+      "required": 2,
+      "available": 12,
+      "passed": true,
+      "reason": "Balance check passed"
+    },
+    "role_eligibility_check": {
+      "department": "IT",
+      "allowed_types": [
+        "Casual",
+        "Sick",
+        "Annual"
+      ],
+      "requested_type": "Casual",
+      "passed": true,
+      "reason": "Role check passed"
+    },
+    "date_overlap_check": {
+      "start_date": "2025-03-10",
+      "end_date": "2025-03-12",
+      "overlapping_leaves": [],
+      "passed": true,
+      "reason": "Found 0 overlapping leave periods"
+    }
+  }
+}
