@@ -1,5 +1,4 @@
-#  AI HR Agent — Netrik Hackathon 2026 (Track 1)
-
+# AI HR Agent — Netrik Hackathon 2026 (Track 1)
 
 **Autonomous, Deterministic HR Pipeline Automation**
 
@@ -10,24 +9,25 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat-square)](#)
 
-*A production-grade AI HR Agent that automates the complete hiring lifecycle — from resume ranking to onboarding — with **zero randomness**, **strict FSM enforcement**, and **formal evidence trails**.*
+_A production-grade AI HR Agent that automates the complete hiring lifecycle — from resume ranking to onboarding — with **zero randomness**, **strict FSM enforcement**, and **formal evidence trails**._
 
 </div>
 
 ---
 
-## Code Blooded
+## Team Members
+
 Sahil Kumar ( IIITDMK )
 Vaibhav Dubey ( IIITDMK )
 Ramyapriya Sivasankar ( SRMIST Chennai )
 Shreya Gaur ( VIT Bhopal )
 
-
-##  Project Overview
+## Project Overview
 
 This AI HR Agent fully automates the enterprise hiring pipeline, replacing manual HR workflows with deterministic, auditable AI-driven decision-making. The system processes 1,200+ resumes, schedules conflict-free interviews, enforces strict candidate pipeline states, and evaluates leave compliance — all with reproducible outputs and formal evidence.
 
 **Key Capabilities:**
+
 - **Resume–JD Matching & Ranking** — TF-IDF embeddings with stable sorting and full score breakdowns
 - **Interview Scheduling** — Interval-based conflict detection with zero overlapping bookings
 - **Candidate Pipeline (FSM)** — Strict finite state machine with no skipping, no reverting, terminal state enforcement
@@ -36,7 +36,6 @@ This AI HR Agent fully automates the enterprise hiring pipeline, replacing manua
 - **Structured JSON Export** — Strict schema compliance for test harness evaluation
 
 ---
-
 
 ## Architecture Diagram
 
@@ -65,7 +64,7 @@ This AI HR Agent fully automates the enterprise hiring pipeline, replacing manua
 
 ---
 
-##  Hiring Workflow Demonstration
+## Hiring Workflow Demonstration
 
 Complete lifecycle with actual system output:
 
@@ -99,9 +98,10 @@ Step 6: EXPORT             → All results in strict JSON schema
 
 ---
 
-##  Automated Testing
+## Automated Testing
 
 ### Run Tests
+
 ```bash
 # Install dependencies
 pip install -r backend/requirements.txt pytest
@@ -118,7 +118,7 @@ python3 -m pytest tests/ -v --tb=short
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone and install
@@ -135,13 +135,14 @@ cd backend && python3 -m uvicorn app.main:app --reload
 
 ---
 
-##  Track 1 Hackathon Submission
+## Track 1 Hackathon Submission
 
 **HireEasy - An autonomous AI HR Agent**
 
 For **Track 1** evaluation, use the template-compliant entry point that outputs the **exact scoring format** required by the judges.
 
 ### Run the submission
+
 ```bash
 # From project root
 cd /path/to/Netrik_Code_Blooded_track1-main
@@ -188,7 +189,6 @@ CONFIG = {
 }
 ```
 
-
 ---
 
 ## Frontend Screenshots
@@ -217,21 +217,21 @@ CONFIG = {
 
 ## 🔍 Edge Case Handling
 
-| Edge Case | Handling | Test |
-|:---|:---|:---|
-| Empty JD text | Returns rankings (no crash) | `test_empty_jd_text` |
-| Empty resume dataset | Raises `ValueError` | `test_empty_resume_dataset` |
-| Malformed leave dates | Rejected with `RULE_INVALID_DATE_FORMAT` | `test_malformed_start_date` |
-| Start date after end date | Rejected with `RULE_INVALID_DATE_RANGE` | `test_start_after_end_rejected` |
-| Unknown employee | Rejected with `RULE_EMPLOYEE_NOT_FOUND` | `test_unknown_employee_rejected` |
-| Duplicate candidate scheduling | Rejected with `CANDIDATE_ALREADY_SCHEDULED` | `test_duplicate_candidate_scheduling` |
-| Invalid state transition string | Returns error with allowed states | `test_invalid_state_string` |
-| Numeric state input | Graceful failure | `test_numeric_state` |
-| Empty state string | Graceful failure | `test_empty_state_string` |
-| Same-state transition | Blocked | `test_same_state_transition` |
-| Whitespace-only IDs | Rejected | `test_whitespace_only_*` |
-| Zero leave balance | Rejected with evidence | `test_zero_balance_rejected` |
-| Leave balance underflow | Balance decremented, successive request fails | `test_no_balance_underflow_on_successive_requests` |
+| Edge Case                       | Handling                                      | Test                                               |
+| :------------------------------ | :-------------------------------------------- | :------------------------------------------------- |
+| Empty JD text                   | Returns rankings (no crash)                   | `test_empty_jd_text`                               |
+| Empty resume dataset            | Raises `ValueError`                           | `test_empty_resume_dataset`                        |
+| Malformed leave dates           | Rejected with `RULE_INVALID_DATE_FORMAT`      | `test_malformed_start_date`                        |
+| Start date after end date       | Rejected with `RULE_INVALID_DATE_RANGE`       | `test_start_after_end_rejected`                    |
+| Unknown employee                | Rejected with `RULE_EMPLOYEE_NOT_FOUND`       | `test_unknown_employee_rejected`                   |
+| Duplicate candidate scheduling  | Rejected with `CANDIDATE_ALREADY_SCHEDULED`   | `test_duplicate_candidate_scheduling`              |
+| Invalid state transition string | Returns error with allowed states             | `test_invalid_state_string`                        |
+| Numeric state input             | Graceful failure                              | `test_numeric_state`                               |
+| Empty state string              | Graceful failure                              | `test_empty_state_string`                          |
+| Same-state transition           | Blocked                                       | `test_same_state_transition`                       |
+| Whitespace-only IDs             | Rejected                                      | `test_whitespace_only_*`                           |
+| Zero leave balance              | Rejected with evidence                        | `test_zero_balance_rejected`                       |
+| Leave balance underflow         | Balance decremented, successive request fails | `test_no_balance_underflow_on_successive_requests` |
 
 ---
 
